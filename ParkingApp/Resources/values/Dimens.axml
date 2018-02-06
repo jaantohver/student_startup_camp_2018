@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <!-- **Graphics** -->
+  <dimen name="standard_activity_padding">8dp</dimen>
+  <dimen name="welcome_content_padding">24dp</dimen>
+  <dimen name="registration_content_padding">16dp</dimen>
+  <dimen name="rounded_button_corner_radius">4dp</dimen>
+  <dimen name="actionbar_elevation">4dp</dimen>
+  <dimen name="fab_margin">16dp</dimen>
+  <dimen name="margin_registration_content_top">40dp</dimen>
+  <dimen name="padding_drawable_edittext">8dp</dimen>
+  <dimen name="trailer_list_main_height">90dp</dimen>
+  <dimen name="padding_trailer_list_item">12dp</dimen>
+  <dimen name="map_overlay_partial_height">160dp</dimen>
+  <dimen name="padding_map_overlay_drawable_drive_time">8dp</dimen>
+  <dimen name="padding_map_overlay_drawable_navigate">16dp</dimen>
+  <dimen name="padding_map_overlay_navigate_right">32dp</dimen>
+  <dimen name="padding_map_overlay_navigate_left">16dp</dimen>
+  <dimen name="account_pair_margin">32dp</dimen>
+  <!-- The odd 7dp (instead of 8dp) fixed the transition flicker on moto g -->
+  <dimen name="trailer_details_margin_vertical">7dp</dimen>
+  <!-- **Text** -->
+  <dimen name="text_size_small">14sp</dimen>
+  <dimen name="text_size_normal">20sp</dimen>
+  <dimen name="text_size_large">24sp</dimen>
+  <dimen name="text_size_list_item_subtitle">17sp</dimen>
+</resources>

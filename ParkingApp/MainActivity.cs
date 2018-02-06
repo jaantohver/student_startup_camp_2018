@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace ParkingApp
 {
-    [Activity(Label = "ParkingApp", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "ParkingApp", Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
         int count = 1;
