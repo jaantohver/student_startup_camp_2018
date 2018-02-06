@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <TextView
+        android:id="@+id/textViewPleaseDescribe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_large"
+        android:layout_margin="@dimen/registration_content_padding"
+        android:textColor="@color/tiki_blue" />
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_margin="@dimen/registration_content_padding"
+        android:textColor="@color/tiki_blue_dark"
+        android:scrollbars="vertical"
+        android:inputType="textCapSentences"
+        android:gravity="top"
+        android:background="@android:color/transparent" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/textViewTapOnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginLeft="@dimen/registration_content_padding"
+        android:layout_marginRight="@dimen/registration_content_padding"
+        android:gravity="center" />
+    <parkingapp.droid.TikiButtonBlue
+        android:id="@+id/tikiButtonBlueCamera"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/standard_activity_padding" />
+    <include
+        android:id="@+id/progressBarReport"
+        layout="@layout/tikiprogressbar"
+        android:gravity="bottom" />
+</LinearLayout>
