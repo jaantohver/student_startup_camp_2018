@@ -2073,8 +2073,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f07003d
 			public const int action_bar_title = 2131165245;
 			
-			// aapt resource value: 0x7f07008f
-			public const int action_confirm = 2131165327;
+			// aapt resource value: 0x7f070091
+			public const int action_confirm = 2131165329;
 			
 			// aapt resource value: 0x7f070078
 			public const int action_container = 2131165304;
@@ -2178,6 +2178,9 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f070012
 			public const int disableHome = 2131165202;
 			
+			// aapt resource value: 0x7f07008d
+			public const int downvote = 2131165325;
+			
 			// aapt resource value: 0x7f070061
 			public const int edit_query = 2131165281;
 			
@@ -2250,8 +2253,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f07007e
 			public const int media_actions = 2131165310;
 			
-			// aapt resource value: 0x7f07008e
-			public const int message = 2131165326;
+			// aapt resource value: 0x7f070090
+			public const int message = 2131165328;
 			
 			// aapt resource value: 0x7f070023
 			public const int middle = 2131165219;
@@ -2319,8 +2322,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f070082
 			public const int right_side = 2131165314;
 			
-			// aapt resource value: 0x7f07008b
-			public const int score = 2131165323;
+			// aapt resource value: 0x7f07008c
+			public const int score = 2131165324;
 			
 			// aapt resource value: 0x7f07001a
 			public const int screen = 2131165210;
@@ -2403,8 +2406,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f07006a
 			public const int submit_area = 2131165290;
 			
-			// aapt resource value: 0x7f07008c
-			public const int surface_view = 2131165324;
+			// aapt resource value: 0x7f07008e
+			public const int surface_view = 2131165326;
 			
 			// aapt resource value: 0x7f070011
 			public const int tabMode = 2131165201;
@@ -2421,8 +2424,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f07004c
 			public const int textSpacerNoTitle = 2131165260;
 			
-			// aapt resource value: 0x7f07008d
-			public const int texture_view = 2131165325;
+			// aapt resource value: 0x7f07008f
+			public const int texture_view = 2131165327;
 			
 			// aapt resource value: 0x7f070083
 			public const int time = 2131165315;
@@ -2453,6 +2456,9 @@ namespace ParkingApp.Droid
 			
 			// aapt resource value: 0x7f070009
 			public const int up = 2131165193;
+			
+			// aapt resource value: 0x7f07008b
+			public const int upvote = 2131165323;
 			
 			// aapt resource value: 0x7f070018
 			public const int useLogo = 2131165208;

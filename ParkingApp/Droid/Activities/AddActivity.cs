@@ -34,10 +34,12 @@ namespace ParkingApp.Droid
             SetContentView (Resource.Layout.ActivityAdd);
 
             name = FindViewById<EditText> (Resource.Id.name);
-            name.Hint = "Name";
+            name.Hint = "Name (leave empty to stay anonymous)";
 
             description = FindViewById<EditText> (Resource.Id.description);
-            description.Hint = "Description";
+            description.Hint = "Describe what's happening";
+
+            FindViewById<TextView> (Resource.Id.image).Text = "Add photo ->";
 
             cameraButton = FindViewById<FloatingActionButton> (Resource.Id.fab);
             cameraButton.Click += delegate
@@ -55,7 +57,7 @@ namespace ParkingApp.Droid
             if (PhotoData != null && PhotoData.Length > 0) {
                 Bitmap bmp = BitmapFactory.DecodeByteArray (PhotoData, 0, PhotoData.Length);
 
-                FindViewById<ImageView> (Resource.Id.image).SetImageBitmap (bmp);
+                FindViewById<TextView> (Resource.Id.image).Text = "Photo added";
             }
         }
 
@@ -116,7 +118,9 @@ namespace ParkingApp.Droid
                     return false;
                 }
 
-                Shames.List.Insert (0, s);
+                Shames.List.Add (s);
+
+                HivescaleDB.Instance.AddShame (s);
 
                 Finish ();
 

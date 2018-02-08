@@ -21,8 +21,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
+        android:tint="@android:color/white"
         android:src="@drawable/ic_add_a_photo_black_24dp"
-        app:fab_colorNormal="@android:color/white"
-        app:fab_colorPressed="@color/tiki_blue_dark"
-        app:fab_colorRipple="@color/tiki_blue_dark" />
+        app:fab_colorNormal="#33f3cc"
+        app:fab_colorPressed="#33f3cc"
+        app:fab_colorRipple="#33f3cc" />
 </RelativeLayout>

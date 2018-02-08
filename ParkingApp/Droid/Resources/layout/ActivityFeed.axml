@@ -14,7 +14,9 @@
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:divider="#FFFFFF"
+            android:dividerHeight="1dp" />
     </LinearLayout>
     <Refractored.Fab.FloatingActionButton
         android:id="@+id/fab"
@@ -25,7 +27,7 @@
         android:layout_margin="16dp"
         android:tint="@android:color/white"
         android:src="@drawable/ic_add_black_24dp"
-        fab:fab_colorNormal="@color/tiki_blue"
-        fab:fab_colorPressed="@color/tiki_blue_dark"
-        fab:fab_colorRipple="@color/tiki_blue_dark" />
+        fab:fab_colorNormal="#33f3cc"
+        fab:fab_colorPressed="#33f3cc"
+        fab:fab_colorRipple="#33f3cc" />
 </RelativeLayout>

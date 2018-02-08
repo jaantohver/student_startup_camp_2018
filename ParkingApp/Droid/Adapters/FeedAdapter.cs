@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using Android.Views;
 using Android.Widget;
@@ -10,9 +11,14 @@ namespace ParkingApp.Droid
 {
     class FeedAdapter : ArrayAdapter<Shame>
     {
+        static readonly Color selected = Color.ParseColor ("#33f3cc");
+        static readonly Color notSelected = Color.LightSlateGray;
+
         readonly Context context;
         readonly int resource;
         readonly List<Shame> items;
+
+        public event EventHandler Upvoted, Downvoted;
 
         public FeedAdapter (Context context, int resource, List<Shame> items) : base (context, resource, items)
         {
@@ -68,6 +74,7 @@ namespace ParkingApp.Droid
                 }
 
                 holder.Name = view.FindViewById<TextView> (Resource.Id.name);
+                holder.Score = view.FindViewById<TextView> (Resource.Id.score);
 
                 view.Tag = holder;
             }
@@ -90,6 +97,59 @@ namespace ParkingApp.Droid
                 holder.Image.SetImageBitmap (bmp);
             }
 
+            holder.Score.Text = s.Score.ToString ();
+
+            ImageButton upvote = view.FindViewById<ImageButton> (Resource.Id.upvote);
+            ImageButton downvote = view.FindViewById<ImageButton> (Resource.Id.downvote);
+
+            if (s.Upvoted) {
+                upvote.SetColorFilter (selected);
+            } else {
+                upvote.SetColorFilter (notSelected);
+            }
+
+            upvote.Click += delegate
+            {
+                if (s.Upvoted) {
+                    holder.Score.Text = (int.Parse (holder.Score.Text) - 1).ToString ();
+                    upvote.SetColorFilter (notSelected);
+                } else if (s.Downvoted) {
+                    holder.Score.Text = (int.Parse (holder.Score.Text) + 2).ToString ();
+                    upvote.SetColorFilter (selected);
+                } else {
+                    holder.Score.Text = (int.Parse (holder.Score.Text) + 1).ToString ();
+                    upvote.SetColorFilter (selected);
+                }
+
+                downvote.SetColorFilter (notSelected);
+
+                Upvoted?.Invoke (position, EventArgs.Empty);
+            };
+
+            if (s.Downvoted) {
+                downvote.SetColorFilter (selected);
+            } else {
+                downvote.SetColorFilter (notSelected);
+            }
+
+            downvote.Click += delegate
+            {
+                if (s.Downvoted) {
+                    holder.Score.Text = (int.Parse (holder.Score.Text) + 1).ToString ();
+                    downvote.SetColorFilter (notSelected);
+                } else if (s.Upvoted) {
+                    holder.Score.Text = (int.Parse (holder.Score.Text) - 2).ToString ();
+                    downvote.SetColorFilter (selected);
+                } else {
+                    holder.Score.Text = (int.Parse (holder.Score.Text) - 1).ToString ();
+                    downvote.SetColorFilter (selected);
+                }
+
+                upvote.SetColorFilter (notSelected);
+
+                Downvoted?.Invoke (position, EventArgs.Empty);
+            };
+
             return view;
         }
 
@@ -106,6 +166,7 @@ namespace ParkingApp.Droid
 
     class ViewHolder : Java.Lang.Object
     {
+        public TextView Score { get; set; }
         public TextView Name { get; set; }
         public TextView Text { get; set; }
         public ImageView Image { get; set; }

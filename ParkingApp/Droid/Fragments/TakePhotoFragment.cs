@@ -3,11 +3,11 @@
 using Android;
 using Android.OS;
 using Android.Views;
-using Android.Graphics;
 using Android.Content.PM;
 using Android.Support.V4.App;
 
 using Com.Google.Android.Cameraview;
+
 using Refractored.Fab;
 
 namespace ParkingApp.Droid
