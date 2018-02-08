@@ -146,7 +146,10 @@ namespace ParkingApp.Droid
             Toolbar toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
             toolbar.Title = "Post";
             toolbar.SetTitleTextColor (Color.White);
+            toolbar.SetBackgroundColor (new Color (25, 25, 25));
+
             SetActionBar (toolbar);
+
             ActionBar.SetDisplayHomeAsUpEnabled (true);
             ActionBar.SetHomeButtonEnabled (true);
         }

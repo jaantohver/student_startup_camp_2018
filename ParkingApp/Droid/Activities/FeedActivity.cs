@@ -14,7 +14,7 @@ namespace ParkingApp.Droid
         Label = "Wall of Shame",
         MainLauncher = true
     )]
-    public class CategoriesActivity : Activity
+    public class FeedActivity : Activity
     {
         ListView list;
 
@@ -56,6 +56,7 @@ namespace ParkingApp.Droid
             Toolbar toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
             toolbar.Title = "Feed";
             toolbar.SetTitleTextColor (Color.White);
+            toolbar.SetBackgroundColor (new Color (25, 25, 25));
 
             SetActionBar (toolbar);
 

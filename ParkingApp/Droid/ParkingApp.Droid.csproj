@@ -163,6 +163,14 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_add_a_photo_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_add_a_photo_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_a_photo_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_thumb_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_thumb_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_thumb_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_thumb_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_thumb_down_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_thumb_down_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_thumb_down_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_thumb_down_black_24dp.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />

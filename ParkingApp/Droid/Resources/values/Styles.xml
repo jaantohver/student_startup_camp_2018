@@ -1,38 +1,70 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <resources>
-  <style name="TikiBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
-    <item name="android:homeAsUpIndicator">@drawable/ic_back</item>
-    <item name="colorPrimary">@color/tiki_blue</item>
-    <item name="colorPrimaryDark">@color/tiki_blue_dark</item>
-    <item name="colorAccent">@color/tiki_blue_dark</item>
-    <item name="android:textColorPrimary">@android:color/white</item>
-    <item name="android:windowActionBarOverlay">true</item>
-    <item name="android:actionOverflowButtonStyle">@style/OverFlowStyle</item>
-    <item name="android:windowActivityTransitions">true</item>
-  </style>
-  <style name="TikiWizardTheme" parent="TikiBaseTheme">
-    <item name="android:fitsSystemWindows">true</item>
-  </style>
-  <style name="TikiMapTheme" parent="TikiBaseTheme">
-  </style>
-  <style name="TikiDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
-    <item name="android:textColor">@color/tiki_blue_dark</item>
-    <item name="android:textColorPrimary">@color/tiki_blue</item>
-    <item name="colorAccent">@color/tiki_blue_dark</item>
-  </style>
-  <style name="TikiGenericActivityTheme" parent="TikiBaseTheme">
-    <item name="android:textColorPrimary">@color/tiki_blue</item>
-  </style>
-  <style name="PopupMenuTheme" parent="@android:style/Widget.PopupMenu">
-    <item name="android:popupBackground">@android:color/white</item>
-    <item name="android:textColor">@color/tiki_blue_dark</item>
-  </style>
-  <style name="OverFlowStyle" parent="@style/Widget.AppCompat.Light.ActionButton.Overflow">
-    <item name="android:src">@drawable/ic_overflow</item>
-  </style>
-  <style name="Divider">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">1dp</item>
-    <item name="android:background">?android:attr/listDivider</item>
-  </style>
+	<style
+		name   = "TikiBaseTheme"
+		parent = "@style/Theme.AppCompat.Light.NoActionBar">
+		<item
+			name = "android:homeAsUpIndicator">@drawable/ic_back</item>
+		<item
+			name = "colorPrimary">#000000</item>
+		<item
+			name = "colorPrimaryDark">@color/tiki_blue_dark</item>
+		<item
+			name = "colorAccent">@color/tiki_blue_dark</item>
+		<item
+			name = "android:textColorPrimary">@android:color/white</item>
+		<item
+			name = "android:windowActionBarOverlay">true</item>
+		<item
+			name = "android:actionOverflowButtonStyle">@style/OverFlowStyle</item>
+		<item
+			name = "android:windowActivityTransitions">true</item>
+	</style>
+	<style
+		name   = "TikiWizardTheme"
+		parent = "TikiBaseTheme">
+		<item
+			name = "android:fitsSystemWindows">true</item>
+	</style>
+	<style
+		name   = "TikiMapTheme"
+		parent = "TikiBaseTheme">
+	</style>
+	<style
+		name   = "TikiDialogTheme"
+		parent = "Theme.AppCompat.Light.Dialog.Alert">
+		<item
+			name = "android:textColor">@color/tiki_blue_dark</item>
+		<item
+			name = "android:textColorPrimary">@color/tiki_blue</item>
+		<item
+			name = "colorAccent">@color/tiki_blue_dark</item>
+	</style>
+	<style
+		name   = "TikiGenericActivityTheme"
+		parent = "TikiBaseTheme">
+	</style>
+	<style
+		name   = "PopupMenuTheme"
+		parent = "@android:style/Widget.PopupMenu">
+		<item
+			name = "android:popupBackground">@android:color/white</item>
+		<item
+			name = "android:textColor">@color/tiki_blue_dark</item>
+	</style>
+	<style
+		name   = "OverFlowStyle"
+		parent = "@style/Widget.AppCompat.Light.ActionButton.Overflow">
+		<item
+			name = "android:src">@drawable/ic_overflow</item>
+	</style>
+	<style
+		name = "Divider">
+		<item
+			name = "android:layout_width">match_parent</item>
+		<item
+			name = "android:layout_height">1dp</item>
+		<item
+			name = "android:background">?android:attr/listDivider</item>
+	</style>
 </resources>

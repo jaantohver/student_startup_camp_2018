@@ -1971,46 +1971,52 @@ namespace ParkingApp.Droid
 			public const int ic_overflow = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int notification_action_background = 2130837594;
+			public const int ic_thumb_down_black_24dp = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int notification_bg = 2130837595;
+			public const int ic_thumb_up_black_24dp = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int notification_bg_low = 2130837596;
+			public const int notification_action_background = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int notification_bg_low_normal = 2130837597;
+			public const int notification_bg = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int notification_bg_low_pressed = 2130837598;
+			public const int notification_bg_low = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int notification_bg_normal = 2130837599;
+			public const int notification_bg_low_normal = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int notification_bg_normal_pressed = 2130837600;
+			public const int notification_bg_low_pressed = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int notification_icon_background = 2130837601;
-			
-			// aapt resource value: 0x7f020066
-			public const int notification_template_icon_bg = 2130837606;
-			
-			// aapt resource value: 0x7f020067
-			public const int notification_template_icon_low_bg = 2130837607;
+			public const int notification_bg_normal = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int notification_tile_bg = 2130837602;
+			public const int notification_bg_normal_pressed = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int notify_panel_notification_icon_bg = 2130837603;
+			public const int notification_icon_background = 2130837603;
+			
+			// aapt resource value: 0x7f020068
+			public const int notification_template_icon_bg = 2130837608;
+			
+			// aapt resource value: 0x7f020069
+			public const int notification_template_icon_low_bg = 2130837609;
 			
 			// aapt resource value: 0x7f020064
-			public const int tooltip_frame_dark = 2130837604;
+			public const int notification_tile_bg = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int tooltip_frame_light = 2130837605;
+			public const int notify_panel_notification_icon_bg = 2130837605;
+			
+			// aapt resource value: 0x7f020066
+			public const int tooltip_frame_dark = 2130837606;
+			
+			// aapt resource value: 0x7f020067
+			public const int tooltip_frame_light = 2130837607;
 			
 			static Drawable()
 			{
@@ -2067,8 +2073,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f07003d
 			public const int action_bar_title = 2131165245;
 			
-			// aapt resource value: 0x7f07008e
-			public const int action_confirm = 2131165326;
+			// aapt resource value: 0x7f07008f
+			public const int action_confirm = 2131165327;
 			
 			// aapt resource value: 0x7f070078
 			public const int action_container = 2131165304;
@@ -2244,8 +2250,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f07007e
 			public const int media_actions = 2131165310;
 			
-			// aapt resource value: 0x7f07008d
-			public const int message = 2131165325;
+			// aapt resource value: 0x7f07008e
+			public const int message = 2131165326;
 			
 			// aapt resource value: 0x7f070023
 			public const int middle = 2131165219;
@@ -2312,6 +2318,9 @@ namespace ParkingApp.Droid
 			
 			// aapt resource value: 0x7f070082
 			public const int right_side = 2131165314;
+			
+			// aapt resource value: 0x7f07008b
+			public const int score = 2131165323;
 			
 			// aapt resource value: 0x7f07001a
 			public const int screen = 2131165210;
@@ -2394,8 +2403,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f07006a
 			public const int submit_area = 2131165290;
 			
-			// aapt resource value: 0x7f07008b
-			public const int surface_view = 2131165323;
+			// aapt resource value: 0x7f07008c
+			public const int surface_view = 2131165324;
 			
 			// aapt resource value: 0x7f070011
 			public const int tabMode = 2131165201;
@@ -2412,8 +2421,8 @@ namespace ParkingApp.Droid
 			// aapt resource value: 0x7f07004c
 			public const int textSpacerNoTitle = 2131165260;
 			
-			// aapt resource value: 0x7f07008c
-			public const int texture_view = 2131165324;
+			// aapt resource value: 0x7f07008d
+			public const int texture_view = 2131165325;
 			
 			// aapt resource value: 0x7f070083
 			public const int time = 2131165315;
