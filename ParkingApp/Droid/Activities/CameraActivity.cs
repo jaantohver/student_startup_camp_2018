@@ -7,6 +7,8 @@ using Android.Widget;
 using Android.Graphics;
 using Android.Content.PM;
 using Android.Support.V4.App;
+using Java.IO;
+using Java.Nio;
 
 namespace ParkingApp.Droid
 {
@@ -24,6 +26,7 @@ namespace ParkingApp.Droid
         protected override void OnCreate (Bundle savedInstanceState)
         {
             base.OnCreate (savedInstanceState);
+
             SetContentView (Resource.Layout.ActivityCamera);
 
             _pager = FindViewById<NonSwipeableViewPager> (Resource.Id.pagerCamera);
@@ -46,7 +49,7 @@ namespace ParkingApp.Droid
         void SetUpActionBar ()
         {
             Toolbar toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
-            toolbar.Title = "Strings.AddPhoto";
+            toolbar.Title = "Take photo";
             toolbar.SetTitleTextColor (Color.White);
             SetActionBar (toolbar);
             ActionBar.SetDisplayHomeAsUpEnabled (true);
@@ -79,7 +82,7 @@ namespace ParkingApp.Droid
                         "Strings.WriteExternalStoragePermissionNeeded",
                         "Strings.Cancel", (sender, e) =>
                         {
-                            ReportActivity.PhotoData = null;
+                            AddActivity.PhotoData = null;
                             Finish ();
                         },
                         "Strings.OK", (sender, e) => _adapter.PhotoPreviewFragment.TrySavePhoto ()
@@ -92,7 +95,7 @@ namespace ParkingApp.Droid
         void PreviousFragment ()
         {
             // If PreviousFragment() was called the save button wasn't clicked.
-            ReportActivity.PhotoData = null;
+            AddActivity.PhotoData = null;
             if (_pager.CurrentItem == (int)Constants.CameraFragments.PhotoPreview) {
                 _pager.SetCurrentItem (0, true);
                 if (_lastBitMap != null) {
@@ -116,20 +119,35 @@ namespace ParkingApp.Droid
             _adapter.PhotoPreviewFragment.ShowLoading ();
         }
 
-        void OnPhotoDecoded (Bitmap bitmap)
+        void OnPhotoDecoded (byte[] bytes)
         {
-            float aspectRatio = (float)bitmap.Height / bitmap.Width;
+            Bitmap bmp = BitmapFactory.DecodeByteArray (bytes, 0, bytes.Length);
+
+            float aspectRatio = (float)bmp.Height / bmp.Width;
             int height = _adapter.PhotoPreviewFragment.PreviewImageView.Height;
             int width = (int)Math.Round (height / aspectRatio);
-            Bitmap scaled = Bitmap.CreateScaledBitmap (bitmap, width, height, false);
-            bitmap.Recycle ();
-            bitmap.Dispose ();
+
+            Bitmap scaled = Bitmap.CreateScaledBitmap (bmp, width, height, false);
+            bmp.Recycle ();
+            bmp.Dispose ();
+
             if (width > height) {
                 scaled = RotateBitmap90 (scaled);
             }
             _lastBitMap = scaled;
             _adapter.PhotoPreviewFragment.PreviewImageView.SetImageBitmap (_lastBitMap);
             _adapter.PhotoPreviewFragment.ShowImage ();
+
+
+            //wtfblock
+            var stream = new System.IO.MemoryStream ();
+            scaled.Compress (Bitmap.CompressFormat.Png, 0, stream);
+            byte[] byteArray = stream.ToArray ();
+            AddActivity.PhotoData = byteArray;
+            //wtfblock
+
+
+            Finish ();
         }
 
         Bitmap RotateBitmap90 (Bitmap bitmap)

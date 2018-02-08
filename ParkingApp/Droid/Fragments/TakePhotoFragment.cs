@@ -8,17 +8,18 @@ using Android.Content.PM;
 using Android.Support.V4.App;
 
 using Com.Google.Android.Cameraview;
+using Refractored.Fab;
 
 namespace ParkingApp.Droid
 {
     public class TakePhotoFragment : Fragment
     {
-        TikiButtonBlue _cameraButton;
+        FloatingActionButton _cameraButton;
         CameraView _cameraView;
         Action _onTakePhoto;
-        Action<Bitmap> _onImageDecoded;
+        Action<byte[]> _onImageDecoded;
 
-        public TakePhotoFragment (Action onTakePhoto, Action<Bitmap> onImageDecoded)
+        public TakePhotoFragment (Action onTakePhoto, Action<byte[]> onImageDecoded)
         {
             _onTakePhoto = onTakePhoto;
             _onImageDecoded = onImageDecoded;
@@ -28,8 +29,7 @@ namespace ParkingApp.Droid
         {
             View v = inflater.Inflate (Resource.Layout.FragmentTakePhoto, container, false);
 
-            _cameraButton = v.FindViewById<TikiButtonBlue> (Resource.Id.tikiButtonBlueTakePhoto);
-            _cameraButton.Text = "Strings.TakeThePhoto";
+            _cameraButton = v.FindViewById<FloatingActionButton> (Resource.Id.fab);
             _cameraView = v.FindViewById<CameraView> (Resource.Id.cameraView);
             _cameraView.AddCallback (new CameraViewCallback (_onImageDecoded));
 
@@ -83,17 +83,16 @@ namespace ParkingApp.Droid
 
         class CameraViewCallback : CameraView.Callback
         {
-            Action<Bitmap> _onDecoded;
+            Action<byte[]> _onDecoded;
 
-            public CameraViewCallback (Action<Bitmap> onDecoded)
+            public CameraViewCallback (Action<byte[]> onDecoded)
             {
                 _onDecoded = onDecoded;
             }
 
-            public override async void OnPictureTaken (CameraView p0, byte[] p1)
+            public override void OnPictureTaken (CameraView p0, byte[] p1)
             {
-                ReportActivity.PhotoData = p1;
-                _onDecoded (BitmapFactory.DecodeByteArray (p1, 0, p1.Length));
+                _onDecoded (p1);
             }
         }
     }

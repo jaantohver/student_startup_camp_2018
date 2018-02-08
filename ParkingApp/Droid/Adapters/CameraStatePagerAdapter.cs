@@ -14,7 +14,7 @@ namespace ParkingApp.Droid
         public TakePhotoFragment TakePhotoFragment { get; }
         public PhotoPreviewFragment PhotoPreviewFragment { get; }
 
-        public CameraStatePagerAdapter (FragmentManager fm, Action onTakePhoto, Action<Bitmap> onDecoded) : base (fm)
+        public CameraStatePagerAdapter (FragmentManager fm, Action onTakePhoto, Action<byte[]> onDecoded) : base (fm)
         {
             _fragments = new Fragment[Enum.GetNames (typeof (CameraFragments)).Length];
             _fragments[(int)CameraFragments.TakePhoto] = TakePhotoFragment = new TakePhotoFragment (onTakePhoto, onDecoded);

@@ -12,7 +12,6 @@ namespace ParkingApp.Droid
     {
         public ImageView PreviewImageView;
         ProgressBarManager _pbManager;
-        TikiButtonBlue _saveButton;
 
         public override bool UserVisibleHint
         {
@@ -33,29 +32,8 @@ namespace ParkingApp.Droid
 
             PreviewImageView = v.FindViewById<ImageView> (Resource.Id.imageViewPreview);
             _pbManager = new ProgressBarManager (v.FindViewById<ProgressBar> (Resource.Id.progressBarPhotoPreview));
-            _saveButton = v.FindViewById<TikiButtonBlue> (Resource.Id.tikiButtonBlueSavePhoto);
-            _saveButton.Text = "Save";
 
             return v;
-        }
-
-        public override void OnResume ()
-        {
-            base.OnResume ();
-            _saveButton.Click += OnSaveClicked;
-        }
-
-        public override void OnPause ()
-        {
-            _saveButton.Click -= OnSaveClicked;
-            base.OnPause ();
-        }
-
-        void OnSaveClicked (object src, EventArgs e)
-        {
-            if (ReportActivity.PhotoData != null) {
-                TrySavePhoto ();
-            }
         }
 
         public void TrySavePhoto ()
@@ -76,7 +54,7 @@ namespace ParkingApp.Droid
         async void SavePhoto ()
         {
             ShowLoading (hideImage: false);
-            await new SaveUtil ().SaveJpg (ReportActivity.PhotoData);
+            await new SaveUtil ().SaveJpg (AddActivity.PhotoData);
             Activity.Finish ();
         }
 

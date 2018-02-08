@@ -42,9 +42,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="ZhangHai.Android.MaterialProgressBar">
-      <HintPath>..\packages\ZhangHai.Android.MaterialProgressBar.1.4.2\lib\MonoAndroid80\ZhangHai.Android.MaterialProgressBar.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>
@@ -93,23 +90,29 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.Fab">
+      <HintPath>..\packages\Refractored.FloatingActionButton.2.1.0\lib\MonoAndroid10\Refractored.Fab.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Activities\ReportActivity.cs" />
     <Compile Include="Activities\CameraActivity.cs" />
-    <Compile Include="Activities\CategoriesActivity.cs" />
+    <Compile Include="Activities\FeedActivity.cs" />
     <Compile Include="Fragments\PhotoPreviewFragment.cs" />
     <Compile Include="Fragments\TakePhotoFragment.cs" />
     <Compile Include="Utils\UIUtil.cs" />
     <Compile Include="Utils\SaveUtil.cs" />
-    <Compile Include="Adapters\CategoriesAdapter.cs" />
+    <Compile Include="Adapters\FeedAdapter.cs" />
     <Compile Include="Adapters\NonSwipeableViewPager.cs" />
     <Compile Include="Adapters\CameraStatePagerAdapter.cs" />
     <Compile Include="Views\SquareImageView.cs" />
     <Compile Include="Views\TikiButtonBlue.cs" />
     <Compile Include="Views\TikiButton.cs" />
+    <Compile Include="Activities\AddActivity.cs" />
     <Compile Include="Utils\ProgressBarManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,13 +128,11 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\layout\ActivityReport.axml" />
     <AndroidResource Include="Resources\layout\FragmentTakePhoto.axml" />
     <AndroidResource Include="Resources\layout\FragmentPhotoPreview.axml" />
-    <AndroidResource Include="Resources\layout\CategoryItem.axml" />
+    <AndroidResource Include="Resources\layout\ShameItemImage.axml" />
     <AndroidResource Include="Resources\layout\ActivityCamera.axml" />
-    <AndroidResource Include="Resources\layout\Categories.axml" />
-    <AndroidResource Include="Resources\layout\TikiProgressBar.axml" />
+    <AndroidResource Include="Resources\layout\ActivityFeed.axml" />
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\layout\Photo.axml" />
@@ -151,6 +152,17 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_back.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_overflow.png" />
     <AndroidResource Include="Resources\menu\MenuConfirm.xml" />
+    <AndroidResource Include="Resources\layout\ShameItemDescription.axml" />
+    <AndroidResource Include="Resources\layout\ShameItemImageAndDescription.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_add_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_add_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_black_24dp.png" />
+    <AndroidResource Include="Resources\layout\ActivityAdd.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_add_a_photo_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_add_a_photo_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_a_photo_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_a_photo_black_24dp.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />
@@ -180,4 +192,5 @@
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.v7.AppCompat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.RecyclerView.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.RecyclerView.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.v7.RecyclerView.targets')" />
 </Project>

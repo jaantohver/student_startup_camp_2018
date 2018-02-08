@@ -11,5 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Networking.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shames.cs" />
   </ItemGroup>
 </Project>
